@@ -265,23 +265,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "libsn100u_fw",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib/libsn100u_fw.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "32",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
 	name: "libsndmonitor",
 	owner: "xiaomi",
 	strip: {
@@ -1548,10 +1531,11 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/hw/com.qti.chi.override.so"],
-			shared_libs: ["libc++", "libcutils", "liblog", "libcamera_metadata", "libhardware", "libhidlbase", "libhidltransport", "libqdMetaData", "libsync", "libutils", "vendor.qti.hardware.vpp@1.1", "vendor.qti.hardware.vpp@1.2", "libgrallocutils", "libmialgo_fs", "libmialgo_utils", "libion", "libmialgo_rfs", "libc", "libm", "libdl", ],
+			shared_libs: ["libc++", "libcutils", "liblog", "libcamera_metadata", "libhardware", "libhidlbase", "libhidltransport", "libqdMetaData", "libsync", "libutils", "vendor.qti.hardware.vpp@1.1", "vendor.qti.hardware.vpp@1.2", "libmialgo_fs", "libmialgo_utils", "libion", "libmialgo_rfs", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "64",
+	check_elf_files: false,
 	relative_install_path: "hw",
 	prefer: true,
 	soc_specific: true,
@@ -1726,6 +1710,7 @@ cc_prebuilt_library_shared {
 		},
 	},
 	compile_multilib: "64",
+	check_elf_files: false,
 	prefer: true,
 	soc_specific: true,
 }
@@ -1777,6 +1762,7 @@ cc_prebuilt_library_shared {
 		},
 	},
 	compile_multilib: "64",
+	check_elf_files: false,
 	prefer: true,
 	soc_specific: true,
 }
@@ -1811,6 +1797,7 @@ cc_prebuilt_library_shared {
 		},
 	},
 	compile_multilib: "64",
+	check_elf_files: false,
 	prefer: true,
 	soc_specific: true,
 }
@@ -1828,6 +1815,7 @@ cc_prebuilt_library_shared {
 		},
 	},
 	compile_multilib: "64",
+	check_elf_files: false,
 	prefer: true,
 	soc_specific: true,
 }
@@ -1964,6 +1952,7 @@ cc_prebuilt_library_shared {
 		},
 	},
 	compile_multilib: "64",
+	check_elf_files: false,
 	prefer: true,
 	soc_specific: true,
 }
@@ -1981,6 +1970,7 @@ cc_prebuilt_library_shared {
 		},
 	},
 	compile_multilib: "64",
+	check_elf_files: false,
 	prefer: true,
 	soc_specific: true,
 }
@@ -1998,6 +1988,7 @@ cc_prebuilt_library_shared {
 		},
 	},
 	compile_multilib: "64",
+	check_elf_files: false,
 	prefer: true,
 	soc_specific: true,
 }
@@ -2389,6 +2380,7 @@ cc_prebuilt_library_shared {
 		},
 	},
 	compile_multilib: "64",
+	check_elf_files: false,
 	prefer: true,
 	soc_specific: true,
 }
@@ -2423,6 +2415,7 @@ cc_prebuilt_library_shared {
 		},
 	},
 	compile_multilib: "64",
+	check_elf_files: false,
 	prefer: true,
 	soc_specific: true,
 }
@@ -2470,10 +2463,11 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libmialgoengine.so"],
-			shared_libs: ["libxmi_high_dynamic_range", "libhvx_interface", "liblog", "libutils", "libcutils", "libhardware", "libnativewindow", "libEGL", "libGLESv2", "libgrallocutils", "libmpbase", "libarcsoft_beautyshot", "libarcsoft_dualcam_refocus", "libarcsoft_portrait_lighting", "libarcsoft_portrait_lighting_c", "libarcsoft_distortion_correction", "libarcsoft_bodyslim", "libalhLDC", "libalAILDC", "libalCFR", "libmibokeh_712", "libsdk_sr", "lib_denoiser3", "libxml2_vendor", "libc++", "libc", "libm", "libdl", ],
+			shared_libs: ["libxmi_high_dynamic_range", "libhvx_interface", "liblog", "libutils", "libcutils", "libhardware", "libnativewindow", "libEGL", "libGLESv2", "libmpbase", "libarcsoft_beautyshot", "libarcsoft_dualcam_refocus", "libarcsoft_portrait_lighting", "libarcsoft_portrait_lighting_c", "libarcsoft_distortion_correction", "libarcsoft_bodyslim", "libalhLDC", "libalAILDC", "libalCFR", "libmibokeh_712", "libsdk_sr", "lib_denoiser3", "libxml2_vendor", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "64",
+	check_elf_files: false,
 	prefer: true,
 	soc_specific: true,
 }
@@ -2641,6 +2635,23 @@ cc_prebuilt_library_shared {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libsensorslog.so"],
 			shared_libs: ["liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libsn100u_fw",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libsn100u_fw.so"],
+			shared_libs: [ ],
 		},
 	},
 	compile_multilib: "64",
