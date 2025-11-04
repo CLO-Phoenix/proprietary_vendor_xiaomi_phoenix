@@ -5,7 +5,13 @@
 soong_namespace {
     imports: [
         "hardware/xiaomi",
-        "vendor/qcom/opensource/display",
+        "vendor/qcom/common/vendor/adreno-5xx",
+        "vendor/qcom/common/vendor/adreno-r",
+        "vendor/qcom/common/vendor/adreno-s",
+        "vendor/qcom/common/vendor/adreno-t",
+        "vendor/qcom/common/vendor/adreno-u",
+        "vendor/qcom/common/vendor/media/5.4",
+        "vendor/qcom/common/vendor/perf",
         "vendor/xiaomi/sm6150-common",
     ],
 }
@@ -2623,6 +2629,7 @@ cc_prebuilt_library_shared {
                 "libutils",
                 "vendor.qti.hardware.vpp@1.1",
                 "vendor.qti.hardware.vpp@1.2",
+                "libgrallocutils",
                 "libmialgo_fs",
                 "libmialgo_utils",
                 "libion",
@@ -2634,7 +2641,6 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "64",
-    check_elf_files: false,
     relative_install_path: "hw",
     prefer: true,
     soc_specific: true,
@@ -4076,6 +4082,7 @@ cc_prebuilt_library_shared {
                 "libnativewindow",
                 "libEGL",
                 "libGLESv2",
+                "libgrallocutils",
                 "libmpbase",
                 "libarcsoft_beautyshot",
                 "libarcsoft_dualcam_refocus",
@@ -4098,7 +4105,6 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "64",
-    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
