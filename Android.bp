@@ -5,11 +5,7 @@
 soong_namespace {
     imports: [
         "hardware/xiaomi",
-        "vendor/qcom/common/vendor/adreno-5xx",
-        "vendor/qcom/common/vendor/adreno-r",
-        "vendor/qcom/common/vendor/adreno-s",
-        "vendor/qcom/common/vendor/adreno-t",
-        "vendor/qcom/common/vendor/adreno-u",
+        "vendor/qcom/common/vendor/adreno/r",
         "vendor/qcom/common/vendor/media/5.4",
         "vendor/qcom/common/vendor/perf",
         "vendor/xiaomi/sm6150-common",
@@ -3395,33 +3391,6 @@ cc_prebuilt_library_shared {
                 "libmpbase",
                 "libOpenCL",
                 "liblog",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libbase64",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libbase64.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libc++",
                 "libc",
                 "libm",
                 "libdl",

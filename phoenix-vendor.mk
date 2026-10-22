@@ -280,7 +280,6 @@ PRODUCT_PACKAGES += \
     libarcsoft_portrait_lighting_c \
     libarcsoft_preview_deflicker \
     libarcsoft_supernight \
-    libbase64 \
     libc++_shared \
     libcamera_nn_stub \
     libcamera_scene \
