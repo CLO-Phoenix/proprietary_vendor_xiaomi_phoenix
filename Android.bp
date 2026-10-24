@@ -49,6 +49,7 @@ cc_prebuilt_library_shared {
 cc_prebuilt_library_shared {
     name: "audio.primary.sm6150",
     owner: "xiaomi",
+    enabled: false,
     strip: {
         none: true,
     },

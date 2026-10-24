@@ -166,7 +166,6 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     btaudio_offload_if \
-    audio.primary.sm6150 \
     libacdb-fts \
     libacdbloader \
     libacdbrtac \
