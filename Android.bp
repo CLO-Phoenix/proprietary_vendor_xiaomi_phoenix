@@ -88,6 +88,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "liba2dpoffload",
+    enabled: false,
     owner: "xiaomi",
     strip: {
         none: true,
@@ -373,6 +374,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libhdmiedid",
+    enabled: false,
     owner: "xiaomi",
     strip: {
         none: true,
@@ -404,6 +406,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libhfp",
+    enabled: false,
     owner: "xiaomi",
     strip: {
         none: true,
@@ -461,6 +464,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libsndmonitor",
+    enabled: false,
     owner: "xiaomi",
     strip: {
         none: true,
@@ -492,6 +496,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libspkrprot",
+    enabled: false,
     owner: "xiaomi",
     strip: {
         none: true,

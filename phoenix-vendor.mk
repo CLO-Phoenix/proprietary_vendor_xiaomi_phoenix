@@ -167,7 +167,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     btaudio_offload_if \
     audio.primary.sm6150 \
-    liba2dpoffload \
     libacdb-fts \
     libacdbloader \
     libacdbrtac \
@@ -177,11 +176,7 @@ PRODUCT_PACKAGES += \
     libaudio_log_utils \
     libaudioparsers \
     libaudioroute_ext \
-    libhdmiedid \
-    libhfp \
     libqtigef \
-    libsndmonitor \
-    libspkrprot \
     com.qti.sensor.phoenix_gc02m1_depth \
     com.qti.sensor.phoenix_gc02m1_front \
     com.qti.sensor.phoenix_gc02m1_macro \
